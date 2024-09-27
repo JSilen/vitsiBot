@@ -15,7 +15,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-with open('jokes.json', 'r', encoding='utf-8') as file:
+with open('.venv/jokes.json', 'r', encoding='utf-8') as file:
     jokes = json.load(file)["jokes"]
 
 @bot.event
