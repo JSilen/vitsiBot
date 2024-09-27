@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import json
 import random
+import webserver
 
 load_dotenv()
 
@@ -26,4 +27,5 @@ async def vitsi(ctx):
     random_joke = random.choice(jokes)["text"]
     await ctx.send(random_joke)
 
+webserver.keep_alive()
 bot.run(TOKEN)
